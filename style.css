@@ -62,8 +62,8 @@ body {
 }
 
 .cta-button {
-  margin-top: 40px;
-  padding: 20px 30px;;
+  margin-top: 60px;
+  padding: 20px 30px;
   font-size: 3.5rem;
   background-color: rgb(27, 202, 255);
   color: antiquewhite;
@@ -75,8 +75,10 @@ body {
   animation-delay: 9s; /* this shows the button after the typewriter effect is done */
   font-weight: 500;
   transition: box-shadow 0.25s ease;
+  transition: background-color 0.3s;
   cursor: pointer;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  border-style: none;
 }
 
 
@@ -156,3 +158,37 @@ body::before {
       z-index: 2; /* Place it above the background but below text */
 
 
+}
+
+
+@media (max-width: 480px) {
+  .typewriter p {
+   
+   font-size: 1rem;
+   
+  
+ }
+ 
+ .typewriter h1 {
+  
+  font-size: 5.5rem;
+  
+}
+
+
+.cta-button {
+  
+  font-size: 1.5rem;
+ 
+  font-weight: 400;
+  padding: 10px 20px;
+  
+  
+}
+ 
+ 
+   }
+
+
+
+  
