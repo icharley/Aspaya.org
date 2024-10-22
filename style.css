@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+#totf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+  flex: 1;
+  flex-shrink: 1;
+  height: 100vh;
+  margin: 0;
+  color: antiquewhite;
+
+  /* background styling */
+  background: url("african\ hopefuls\ on\ the\ line.jpg") no-repeat center center;
+  position: relative; /* For positioning overlay */
+  overflow: hidden; /* Prevent scrolling */
+  background-size: cover; /* Cover the entire viewport */   
+  animation: fadeBackground 20s infinite; /* Animation for fading background */
+}
+
+.typewriter {
+  text-align: center; /* Centers the text inside the typewriter */
+  z-index: 2; /* Ensure text is above the overlay */
+
+}
+
+.typewriter h1 {
+  font-family: monospace;
+  font-size: 20.5rem;
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* conceals content until animation starts */
+  white-space: nowrap; /* Ensures the text stays on one line */
+  /* border-right: 1px solid; /* Creates the blinking cursor */
+  display: inline-block; /* Allows the text to be inline but centerable */
+  
+  /* Animation */
+  animation: typing 3s steps(6) forwards, blink 1s step-end infinite;
+}
+
+.typewriter p {
+  font-family: monospace;
+  font-size: 8.5rem;
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* conceals content until animation starts */
+  white-space: nowrap; /* Ensures the text stays on one line */
+  border-right: 1px solid; /* Creates the blinking cursor */
+  display: inline-block; /* Allows the text to be inline but centerable */
+
+    /* Initial State */
+    width: 0; /* Hidden initially */
+  visibility: hidden; /* Start hidden */
+  
+  /* Animation */
+  animation: typing 6s steps(20) forwards, blink 1s step-end infinite;
+  animation-delay: 3s;
+ 
+}
+
+.cta-button {
+  margin-top: 40px;
+  padding: 20px 30px;;
+  font-size: 3.5rem;
+  background-color: rgb(27, 202, 255);
+  color: antiquewhite;
+  border-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+  animation: fadeInButton 1s forwards;
+  animation-delay: 9s; /* this shows the button after the typewriter effect is done */
+  font-weight: 500;
+  transition: box-shadow 0.25s ease;
+  cursor: pointer;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.cta-button:hover {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  background-color: rgb(6, 142, 184);;
+}
+
+
+@keyframes fadeInButton {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+@keyframes fadeBackground {
+      0%, 20% {
+        background: url("african\ hopefuls\ on\ the\ line.jpg") no-repeat center center;
+        background-size: cover; /* Cover the entire viewport */   
+
+      }
+      20%, 40% {
+        background-image: url("youthful\ and\ useful.jpg");
+        background-size: cover; /* Cover the entire viewport */   
+
+
+      }
+      40%, 60% {
+        background-image: url("Ways\ To\ Empower\ Our\ Youth\ to\ Ensure\ Africa\'s\ Ongoing\ Development.jpg");
+        background-size: cover; /* Cover the entire viewport */   
+
+      }
+      60%, 80% {
+        background: url("african\ hopefuls\ on\ the\ line.jpg") no-repeat center center;
+        background-size: cover; /* Cover the entire viewport */   
+
+      }
+      80%, 100% {
+        background-image: url("Skep-Foundation-Blog-Wake-Up-African-Youths.jpg");
+        background-size: cover; /* Cover the entire viewport */   
+
+      }
+    }
+
+/* Keyframes for typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+    visibility: hidden; /* Keep hidden while typing */
+  }
+  to {
+    visibility: visible; /* Show when typing starts */
+    width: 100%;
+  }
+}
+
+/* Keyframes for blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+/* Overlay for background */
+body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(1, 0, 0, 0.6); /* Semi-transparent black */
+      z-index: 2; /* Place it above the background but below text */
+
+
