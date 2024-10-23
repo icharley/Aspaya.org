@@ -40,6 +40,7 @@ body {
   
   /* Animation */
   animation: typing 3s steps(6) forwards, blink 1s step-end infinite;
+  color: orangered;
 }
 
 .typewriter p {
@@ -66,7 +67,7 @@ body {
   padding: 20px 30px;
   font-size: 3.5rem;
   background-color: rgb(27, 202, 255);
-  color: orangered;
+  color:white;
   border-radius: 20px;
   opacity: 0;
   visibility: hidden;
